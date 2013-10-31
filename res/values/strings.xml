@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">yelperHelper</string>
+    <string name="action_settings">Settings</string>
+    <string name="walk">Walk</string>
+    <string name="bike">Bike</string>
+    <string name="drive">Drive</string>
+    <string name="any">Any</string>
+    <string name="disatance">Distance</string>
+    <string name="priceText">Price</string>
+    <string name="onedollar">$</string>
+    <string name="twodollar">$$</string>
+    <string name="threedollar">$$$+</string>
+    <string name="onlyOpen">Show only open now</string>
+    <string name="findit">Find it</string>
+    <string name="about">No idea what to Yelp?</string>
+    <string name="title_activity_picture_grid">PIctureGridActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_picture">PictureActivity</string>
+    <string name="title_activity_result_fragment">ResultFragment</string>
+    <string name="title_activity_details">Details</string>
+
+</resources>
