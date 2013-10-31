@@ -69,6 +69,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
+            
+            <!-- We may need to cut the price option.  The v1.0 yelp api doesn't support thsi as a search parameter that I can find -->
 
             <Button
                 android:id="@+id/priceoption_1"
