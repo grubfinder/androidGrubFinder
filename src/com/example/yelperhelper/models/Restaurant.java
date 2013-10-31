@@ -22,6 +22,9 @@ public class Restaurant {
 	// mobile_url
 	private String mobile_url;
 
+	// is_closed
+	private boolean is_closed;
+
 	// address1
 	private String address1;
 
@@ -40,7 +43,7 @@ public class Restaurant {
 	// photo_url
 	private String photoUrl;
 
-	// categories.name 
+	// categories.name
 	private List<String> categories;
 
 }
