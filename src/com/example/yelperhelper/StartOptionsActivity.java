@@ -9,7 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class Startpage extends Activity {
+public class StartOptionsActivity extends Activity {
 	ImageView image_view;
     
 	@Override
@@ -17,7 +17,7 @@ public class Startpage extends Activity {
 
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_startpage);
+		setContentView(R.layout.activity_start_options);
 		
 		Button btnLaunchSecond = (Button) findViewById(R.id.findit);
 		
@@ -25,7 +25,7 @@ public class Startpage extends Activity {
 			@Override
 
 			public void onClick(View v) {
-				 Intent i = new Intent(Startpage.this.getApplicationContext(), PictureGridActivity.class);
+				 Intent i = new Intent(StartOptionsActivity.this.getApplicationContext(), PictureGridActivity.class);
 				 i.putExtra("text", "Passed String Extra!");
 				 startActivity(i);
 			}
