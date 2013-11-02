@@ -35,7 +35,7 @@ public class PictureGridActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, View v,
 					int position, long id) {
 					
-					Intent i = new Intent(PictureGridActivity.this.getApplicationContext(), Details.class);
+					Intent i = new Intent(PictureGridActivity.this.getApplicationContext(), DetailsFragment.class);
 					 i.putExtra("text", "Passed ID::"+String.valueOf(id));
 					 startActivity(i);
 			}
@@ -49,7 +49,7 @@ public class PictureGridActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(PictureGridActivity.this.getApplicationContext(),
-						Startpage.class);
+						StartOptionsActivity.class);
 				startActivity(i);
 			}
 		});

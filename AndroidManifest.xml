@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.yelperhelper.Startpage"
+            android:name="com.example.yelperhelper.StartOptionsActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +39,7 @@
             android:label="@string/title_activity_result_fragment" >
         </activity>
         <activity
-            android:name="com.example.yelperhelper.Details"
+            android:name="com.example.yelperhelper.DetailsFragment"
             android:label="@string/title_activity_details" >
         </activity>
     </application>
