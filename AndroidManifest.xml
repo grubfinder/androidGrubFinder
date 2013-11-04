@@ -14,12 +14,12 @@
     <application
         android:name="com.example.yelperhelper.YelperHelperApp"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/yelplogosm"
+        android:label="@string/yelper_helper"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.yelperhelper.StartOptionsActivity"
-            android:label="@string/app_name" >
+            android:label="YelperHelper" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,19 +28,19 @@
         </activity>
         <activity
             android:name="com.example.yelperhelper.PictureGridActivity"
-            android:label="@string/title_activity_picture_grid" >
+            android:label="@string/yelper_helper" >
         </activity>
         <activity
             android:name="com.example.yelperhelper.PictureActivity"
-            android:label="@string/title_activity_picture" >
+            android:label="@string/yelper_helper" >
         </activity>
         <activity
             android:name="com.example.yelperhelper.ResultFragment"
-            android:label="@string/title_activity_result_fragment" >
+            android:label="@string/yelper_helper" >
         </activity>
         <activity
             android:name="com.example.yelperhelper.DetailsFragment"
-            android:label="@string/title_activity_details" >
+            android:label="@string/yelper_helper" >
         </activity>
     </application>
 

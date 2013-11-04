@@ -1,10 +1,9 @@
 package com.example.yelperhelper;
 
-import java.io.InputStream;
-import java.net.URL;
+import java.util.ArrayList;
+import java.util.Map;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +12,11 @@ import android.widget.ImageView;
 
 public class ImageAdapter extends BaseAdapter {
 	private Context context;
-	private final String[] arrValValues;
+	private ArrayList<Map> restaurantMap;
 
-	public ImageAdapter(Context context, String[] arrValValues) {
+	public ImageAdapter(Context context, ArrayList<Map> restaurantMap) {
 		this.context = context;
-		this.arrValValues = arrValValues;
+		this.restaurantMap = restaurantMap;
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent) {
@@ -38,31 +37,10 @@ public class ImageAdapter extends BaseAdapter {
 			ImageView imageView = (ImageView) gridView
 					.findViewById(R.id.grid_item_image);
 
-			String arrVal = arrValValues[position];
-
-			if (arrVal.equals("A")) {
-
-				String URL = "http://s3-media1.ak.yelpcdn.com/bphoto/88YvMoR40hh8Bue59gXtMA/l.jpg";
-				imageView.setTag(URL);
-				new DownloadImagesTask().execute(imageView);
-
-			} else if (arrVal.equals("B")) {
-				// imageView.setImageResource(R.drawable.ios_logo);
-				String URL = "http://s3-media4.ak.yelpcdn.com/bphoto/AGBs6zmUDJDqrUYop0QwrQ/sl.jpg";
-				imageView.setTag(URL);
-				new DownloadImagesTask().execute(imageView);
-
-			} else if (arrVal.equals("C")) {
-
-				String URL = "http://s3-media2.ak.yelpcdn.com/bphoto/SQ40hYm3XcuBPp2iwqjj9g/sl.jpg";
-				imageView.setTag(URL);
-				new DownloadImagesTask().execute(imageView);
-
-			} else {
-				String URL = "http://s3-media4.ak.yelpcdn.com/bphoto/mr13QTyoIVt2SfIUike_bA/ms.jpg";
-				imageView.setTag(URL);
-				new DownloadImagesTask().execute(imageView);
-			}
+			String URL = restaurantMap.get(position).get("photo_url")
+					.toString();
+			imageView.setTag(URL);
+			new DownloadImagesTask().execute(imageView);
 
 		} else {
 			gridView = (View) convertView;
@@ -71,22 +49,6 @@ public class ImageAdapter extends BaseAdapter {
 		return gridView;
 	}
 
-	private Drawable LoadImageFromURL(String url) {
-		try {
-			InputStream is = (InputStream) new URL(url).getContent();
-
-			Drawable d = Drawable.createFromStream(is, "src");
-			return d;
-		} catch (Exception e) {
-			System.out.println(e);
-			return null;
-		}
-	}
-
-	@Override
-	public int getCount() {
-		return arrValValues.length;
-	}
 
 	@Override
 	public Object getItem(int position) {
@@ -96,6 +58,12 @@ public class ImageAdapter extends BaseAdapter {
 	@Override
 	public long getItemId(int position) {
 		return 0;
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return this.restaurantMap.size();
 	}
 
 }
