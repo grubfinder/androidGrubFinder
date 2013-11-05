@@ -2,6 +2,7 @@ package com.example.yelperhelper;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -27,7 +28,8 @@ public class StartOptionsActivity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_start_options);
-
+		
+		
 		wakeBtn = (ToggleButton) findViewById(R.id.distance_walk);
 		bikeBtn = (ToggleButton) findViewById(R.id.distance_bike);
 		driveBtn = (ToggleButton) findViewById(R.id.distance_drive);
